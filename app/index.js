@@ -41,10 +41,6 @@ function dbStuff(matches) {
       return;
     }
     updateOrCreate(db, {_id: searchUri, matches: matches}, function(err, resp) {
-      if (err) {
-        console.log(err);
-        return;
-      }
       // send an email if the number of matches changed since yesterday
       if (resp.value.matches !== matches) {
         pmClient.sendEmail({
@@ -56,7 +52,6 @@ function dbStuff(matches) {
           if (err) console.log(err);
         });
       }
-      process.exit();
     });
   });
 }

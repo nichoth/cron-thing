@@ -10,8 +10,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "browserify -d example/example.js > example/bundle.js",
     "watch": "watchify example/example.js -o example/bundle.js -dv",
-    "dev": "parallelshell \"npm run watch\" \"npm run server\"",
-    "server": "node server.js",
+    "dev": "parallelshell \"npm run watch\" \"npm run start\"",
+    "start": "node index.js",
     "demo": "browserify example/example.js > example/bundle.js && html-inline example/index.html | curl -sT- https://htmlb.in"
   },
   "author": "Nick Thomas <nichoth@gmail.com>",
