@@ -1,3 +1,3 @@
 # cron thing
 
-Cron jobs
+Use heroku to do a text search everyday and send me emails.
